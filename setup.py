@@ -6,7 +6,7 @@
 from setuptools import setup, find_packages
 
 
-execfile('signalfx/version.py')
+exec(open("signalfx/version.py").read())
 
 with open('README.rst') as readme:
     long_description = readme.read()
