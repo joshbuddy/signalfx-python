@@ -47,8 +47,8 @@ class SignalFxReporter(reporter.Reporter):
         cumulative_counters = []
         gauges = []
 
-        for metric, details in metrics.items():
-            for submetric, value in details.items():
+        for metric, details in list(metrics.items()):
+            for submetric, value in list(details.items()):
                 info = {
                     'metric': metric,
                     'value': value,

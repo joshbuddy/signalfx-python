@@ -108,7 +108,7 @@ _DATUM = _descriptor.Descriptor(
         _descriptor.FieldDescriptor(
             name='strValue', full_name='com.signalfx.metrics.protobuf.Datum.strValue', index=0,
             number=1, type=9, cpp_type=9, label=1,
-            has_default_value=False, default_value=unicode("", "utf-8"),
+            has_default_value=False, default_value=str("", "utf-8"),
             message_type=None, enum_type=None, containing_type=None,
             is_extension=False, extension_scope=None,
             options=None),
@@ -150,14 +150,14 @@ _DIMENSION = _descriptor.Descriptor(
         _descriptor.FieldDescriptor(
             name='key', full_name='com.signalfx.metrics.protobuf.Dimension.key', index=0,
             number=1, type=9, cpp_type=9, label=1,
-            has_default_value=False, default_value=unicode("", "utf-8"),
+            has_default_value=False, default_value=str("", "utf-8"),
             message_type=None, enum_type=None, containing_type=None,
             is_extension=False, extension_scope=None,
             options=None),
         _descriptor.FieldDescriptor(
             name='value', full_name='com.signalfx.metrics.protobuf.Dimension.value', index=1,
             number=2, type=9, cpp_type=9, label=1,
-            has_default_value=False, default_value=unicode("", "utf-8"),
+            has_default_value=False, default_value=str("", "utf-8"),
             message_type=None, enum_type=None, containing_type=None,
             is_extension=False, extension_scope=None,
             options=None),
@@ -185,14 +185,14 @@ _DATAPOINT = _descriptor.Descriptor(
         _descriptor.FieldDescriptor(
             name='source', full_name='com.signalfx.metrics.protobuf.DataPoint.source', index=0,
             number=1, type=9, cpp_type=9, label=1,
-            has_default_value=False, default_value=unicode("", "utf-8"),
+            has_default_value=False, default_value=str("", "utf-8"),
             message_type=None, enum_type=None, containing_type=None,
             is_extension=False, extension_scope=None,
             options=None),
         _descriptor.FieldDescriptor(
             name='metric', full_name='com.signalfx.metrics.protobuf.DataPoint.metric', index=1,
             number=2, type=9, cpp_type=9, label=1,
-            has_default_value=False, default_value=unicode("", "utf-8"),
+            has_default_value=False, default_value=str("", "utf-8"),
             message_type=None, enum_type=None, containing_type=None,
             is_extension=False, extension_scope=None,
             options=None),
@@ -311,7 +311,7 @@ _PROPERTY = _descriptor.Descriptor(
         _descriptor.FieldDescriptor(
             name='key', full_name='com.signalfx.metrics.protobuf.Property.key', index=0,
             number=1, type=9, cpp_type=9, label=1,
-            has_default_value=False, default_value=unicode("", "utf-8"),
+            has_default_value=False, default_value=str("", "utf-8"),
             message_type=None, enum_type=None, containing_type=None,
             is_extension=False, extension_scope=None,
             options=None),
@@ -346,7 +346,7 @@ _PROPERTYVALUE = _descriptor.Descriptor(
         _descriptor.FieldDescriptor(
             name='strValue', full_name='com.signalfx.metrics.protobuf.PropertyValue.strValue', index=0,
             number=1, type=9, cpp_type=9, label=1,
-            has_default_value=False, default_value=unicode("", "utf-8"),
+            has_default_value=False, default_value=str("", "utf-8"),
             message_type=None, enum_type=None, containing_type=None,
             is_extension=False, extension_scope=None,
             options=None),
@@ -395,7 +395,7 @@ _EVENT = _descriptor.Descriptor(
         _descriptor.FieldDescriptor(
             name='eventType', full_name='com.signalfx.metrics.protobuf.Event.eventType', index=0,
             number=1, type=9, cpp_type=9, label=2,
-            has_default_value=False, default_value=unicode("", "utf-8"),
+            has_default_value=False, default_value=str("", "utf-8"),
             message_type=None, enum_type=None, containing_type=None,
             is_extension=False, extension_scope=None,
             options=None),
@@ -490,64 +490,55 @@ DESCRIPTOR.message_types_by_name['Event'] = _EVENT
 DESCRIPTOR.message_types_by_name['EventUploadMessage'] = _EVENTUPLOADMESSAGE
 
 
-class Datum(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
+class Datum(_message.Message, metaclass=_reflection.GeneratedProtocolMessageType):
     DESCRIPTOR = _DATUM
 
     # @@protoc_insertion_point(class_scope:com.signalfx.metrics.protobuf.Datum)
 
 
-class Dimension(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
+class Dimension(_message.Message, metaclass=_reflection.GeneratedProtocolMessageType):
     DESCRIPTOR = _DIMENSION
 
     # @@protoc_insertion_point(class_scope:com.signalfx.metrics.protobuf.Dimension)
 
 
-class DataPoint(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
+class DataPoint(_message.Message, metaclass=_reflection.GeneratedProtocolMessageType):
     DESCRIPTOR = _DATAPOINT
 
     # @@protoc_insertion_point(class_scope:com.signalfx.metrics.protobuf.DataPoint)
 
 
-class DataPointUploadMessage(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
+class DataPointUploadMessage(_message.Message, metaclass=_reflection.GeneratedProtocolMessageType):
     DESCRIPTOR = _DATAPOINTUPLOADMESSAGE
 
     # @@protoc_insertion_point(class_scope:com.signalfx.metrics.protobuf.DataPointUploadMessage)
 
 
-class PointValue(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
+class PointValue(_message.Message, metaclass=_reflection.GeneratedProtocolMessageType):
     DESCRIPTOR = _POINTVALUE
 
     # @@protoc_insertion_point(class_scope:com.signalfx.metrics.protobuf.PointValue)
 
 
-class Property(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
+class Property(_message.Message, metaclass=_reflection.GeneratedProtocolMessageType):
     DESCRIPTOR = _PROPERTY
 
     # @@protoc_insertion_point(class_scope:com.signalfx.metrics.protobuf.Property)
 
 
-class PropertyValue(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
+class PropertyValue(_message.Message, metaclass=_reflection.GeneratedProtocolMessageType):
     DESCRIPTOR = _PROPERTYVALUE
 
     # @@protoc_insertion_point(class_scope:com.signalfx.metrics.protobuf.PropertyValue)
 
 
-class Event(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
+class Event(_message.Message, metaclass=_reflection.GeneratedProtocolMessageType):
     DESCRIPTOR = _EVENT
 
     # @@protoc_insertion_point(class_scope:com.signalfx.metrics.protobuf.Event)
 
 
-class EventUploadMessage(_message.Message):
-    __metaclass__ = _reflection.GeneratedProtocolMessageType
+class EventUploadMessage(_message.Message, metaclass=_reflection.GeneratedProtocolMessageType):
     DESCRIPTOR = _EVENTUPLOADMESSAGE
 
     # @@protoc_insertion_point(class_scope:com.signalfx.metrics.protobuf.EventUploadMessage)

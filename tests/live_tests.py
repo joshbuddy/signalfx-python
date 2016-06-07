@@ -55,16 +55,16 @@ def test_func(client_name, func_name, sleep_time=5, msg='is being tested!',
         try:
             func = eval(client_name + '.' + func_name)
             return_value = func(*func_args, **kwargs)
-            print func_name, msg, '\n', return_value, '\n'
+            print(func_name, msg, '\n', return_value, '\n')
             time.sleep(sleep_time)
-        except requests.exceptions.HTTPError, e:
-            print func_name, e.message
+        except requests.exceptions.HTTPError as e:
+            print(func_name, e.message)
     else:
-        print func_name, 'not available'
+        print(func_name, 'not available')
     return return_value
 
 def apply_sequence(client_name, sequence, f_args, seq_msg=None, **kwargs):
-    print sequence, 'expected behavior is', seq_msg
+    print(sequence, 'expected behavior is', seq_msg)
     for item in sequence:
         test_func(client_name, item, func_args=f_args, **kwargs)
 

@@ -36,5 +36,5 @@ class _Channel(object):
     def __str__(self):
         return 'channel<{0}>'.format(self._name)
 
-    def next(self):
+    def __next__(self):
         return self._next()
