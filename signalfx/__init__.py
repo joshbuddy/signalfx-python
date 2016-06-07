@@ -42,11 +42,9 @@ in-depth examples.
 import logging
 import requests
 
-from constants import DEFAULT_API_ENDPOINT, DEFAULT_INGEST_ENDPOINT, \
+from .constants import DEFAULT_API_ENDPOINT, DEFAULT_INGEST_ENDPOINT, \
         DEFAULT_STREAM_ENDPOINT, DEFAULT_TIMEOUT
-import ingest
-import rest
-import signalflow
+from . import ingest, rest, signalflow
 
 
 __author__ = 'SignalFx, Inc'
