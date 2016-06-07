@@ -8,7 +8,7 @@ import queue
 import requests
 import threading
 
-from constants import DEFAULT_INGEST_ENDPOINT, DEFAULT_TIMEOUT, \
+from .constants import DEFAULT_INGEST_ENDPOINT, DEFAULT_TIMEOUT, \
         DEFAULT_BATCH_SIZE, SUPPORTED_EVENT_CATEGORIES
 from . import version
 
