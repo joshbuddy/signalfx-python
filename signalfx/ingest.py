@@ -4,7 +4,7 @@ import collections
 import json
 import logging
 import pprint
-import Queue
+import queue
 import requests
 import threading
 
@@ -48,7 +48,7 @@ class _BaseSignalFxIngestClient(object):
 
         self._extra_dimensions = {}
 
-        self._queue = Queue.Queue()
+        self._queue = queue.Queue()
         self._thread_running = False
         self._lock = threading.Lock()
 
